@@ -25,7 +25,8 @@ The reaction data consists of four columns:
 
 **Task**: The similarity score between two users is the number of jobs which they both like. Find the two users with the highest similarity.
 
-**Answer**: _[Enter the two user IDs & their similarity score here]_
+**Answer**: Users 5193, 1791 with similarity of 181
+
 
 ### Task 2
 
@@ -33,7 +34,7 @@ In the `data` folder there is an additional CSV file called `jobs.csv`. It conta
 
 **Task**: The similarity score between two companies is the number of users who like at least one job at both companies. Using both the `reactions.csv` and `jobs.csv` data, find the two companies with the highest similarity score.
 
-**Answer**: _[Enter the two company IDs & their similarity score here]_
+**Answer**: Companies 46, 92 with similarity of 104
 
 ### Task 3
 
@@ -47,11 +48,17 @@ We don't think it's fair to ask you to build something with a UI, as we know thi
 - If the best example of your work is something you've done at a company, it's okay to link to a live deployed version
 - If you can't link to anything, a screenshot is also fine
 
-**Answer**: _[Add a link to repo/website/screenshot here]_
+**Answer**: As part of the software engineering group project:
+- I single-handedly built the Foodprint [landing page](https://foodprint.orth.uk) using GatsbyJS/ React in 4 hours
+- The React Native app and NodeJS backend was done as a group project with 6 other people. Though I did not design or draw the UI, I was responsible for state management, authentication, navigation, etc. I orchestrated the deployment to [iOS](https://apps.apple.com/us/app/foodprint/id1510153419?ls=1) and [Android](https://play.google.com/store/apps/details?id=uk.orth.foodprint) stores. I helped another developer with their UI design/ goals (I was aware not to micromanage her designs though, to allow her to develop her skills as well.) I have designed things in the past, some are shown [here](https://orth.uk/projects).
+- [Github](https://github.com/ben-xD/foodprint/)
+- I also wrote documentation and automated deployment (to reduce complexity challenges with less experienced team mates).
 
 **Task**: Tell us about the biggest challenge you faced in building the above.
 
-**Answer**: _[Write your answer here (300 words max)]_
+**Answer**: It was difficult to get other students to do challenging things that don't seem worth it initially. The tradeoffs are not always clear. Often times, it may seem obvious to do something which incurs a high cost initially to me, but this may not be clear to others who haven't done it before. Therefore, sometimes I suffer the consequences of other people's decisions, but eventually they see the issues more clearly. 2 examples:
+- E.g. Using typescript instead of javascript. Though I wrote a prototype of the Foodprint app in a few days using Typescript, another student decided to quietly spend the next few weeks rebuilding in javascript because he thought Typescript was too difficult for beginners. After talking it through, I decided to convert my existing app to Javascript to save him the effort of rewriting it, as his progress was not good. I compromised there. A few weeks later, I was helping the same student with a bug he introduced which would have been detected by typescript...
+- Switching from self-hosted Gitlab to Github because of the downtime/ availability. I wanted to make the move immediately after the first 1-day downtime occured, to avoid any future issues with productivity. Other students were not willing to do it, as it meant learning how to use Github. I compromised, and did this at the end of the project, to make the project more accessible (Github is more popular than Github.). There was another period of downtime (albeit shorter), which meant we simply couldn't share code.
 
 ## Submission
 

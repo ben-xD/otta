@@ -1,0 +1,29 @@
+{
+  "name": "otta-engineering-interview-task",
+  "version": "1.0.0",
+  "description": "This is the take-home interview task for engineering job applications at Otta.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ben-xD/otta.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ben-xD/otta/issues"
+  },
+  "homepage": "https://github.com/ben-xD/otta#readme",
+  "devDependencies": {
+    "@types/line-reader": "^0.0.33",
+    "@types/node": "^14.14.31",
+    "eslint": "^7.20.0",
+    "typescript": "^4.1.5"
+  },
+  "dependencies": {
+    "esm": "^3.2.25"
+  }
+}

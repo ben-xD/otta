@@ -32,7 +32,7 @@ export class Reactions {
       this.likedJobsByUserId.set(userId, jobIds);
     }
 
-    // Add to alternative data structuure
+    // Add to alternative data structure (more efficient for task 2)
     if (this.userIdsByJobId.has(jobId)) {
       this.userIdsByJobId.set(
         jobId,

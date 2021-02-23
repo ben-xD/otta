@@ -67,8 +67,8 @@ We don't think it's fair to ask you to build something with a UI, as we know thi
 
 Once you've completed all of the above tasks, make sure:
 
-- [ ] You've committed all of the code used, and your edited answers, to the `master` branch
-- [ ] You've pushed the changes to your repo
-- [ ] You add `XavKearney` and `shfranklin` as contributors for your personal repo, and send a link to the repo in an email to us
+- [x] You've committed all of the code used, and your edited answers, to the `master` branch
+- [x] You've pushed the changes to your repo
+- [x] You add `XavKearney` and `shfranklin` as contributors for your personal repo, and send a link to the repo in an email to us
 
 Good luck!

@@ -3,13 +3,14 @@ import { CompanyJobListings } from './companies';
 import { Reactions } from './reactions';
 
 const main = () => {
+  printTaskOneAndTwo();
   reactionsTest1();
   jobsTest1();
   jobsTest2();
-  task1and2();
+  jobsTest3();
 };
 
-const task1and2 = () => {
+const printTaskOneAndTwo = () => {
   let reactions = Reactions.fromReactionsFile('./data/reactions.csv');
   let companies = CompanyJobListings.fromJobsFile('./data/jobs.csv');
 
@@ -46,6 +47,37 @@ const jobsTest2 = () => {
     again: companies.getSimilarity(reactions, '46', '92'),
   });
   assert(actualSimilarity == 104);
+};
+
+const jobsTest3 = () => {
+  let reactions = new Reactions();
+  reactions.addRecord('ben', 'job1', true);
+  reactions.addRecord('ben', 'job2', true);
+  reactions.addRecord('amy', 'job2', true);
+  reactions.addRecord('Cressida', 'job1', true);
+  reactions.addRecord('Cressida', 'job3', false);
+  reactions.addRecord('ben', 'job3', true);
+
+  let companies = new CompanyJobListings();
+  companies.addRecord('Otta', 'job1');
+  companies.addRecord('Otta', 'job2');
+  companies.addRecord('Ocado', 'job3');
+  companies.addRecord('McDonalds', 'job4');
+
+  assert(companies.getSimilarity(reactions, 'Otta', 'Ocado') == 1);
+  assert(companies.getSimilarity(reactions, 'Otta', 'McDonalds') == 0);
+  assert(companies.getSimilarity(reactions, 'Otta', 'NON EXISTENT') == 0);
+
+  reactions.addRecord('Cressida', 'job2', true);
+  reactions.addRecord('Cressida', 'job3', false);
+  assert(companies.getSimilarity(reactions, 'Otta', 'Ocado') == 1);
+  reactions.addRecord('Cressida', 'job3', true);
+  assert(companies.getSimilarity(reactions, 'Otta', 'Ocado') == 2);
+
+  assert(
+    JSON.stringify(companies.getHighestSimilarityCompanies(reactions)) ==
+      JSON.stringify([2, 'Otta', 'Ocado'])
+  );
 };
 
 const reactionsTest1 = () => {

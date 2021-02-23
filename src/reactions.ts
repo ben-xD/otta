@@ -20,6 +20,7 @@ export class Reactions {
     if (!isLiked || !userId || !jobId) {
       return;
     }
+
     if (this.likedJobsByUserId.has(userId)) {
       this.likedJobsByUserId.set(
         userId,
@@ -31,6 +32,7 @@ export class Reactions {
       this.likedJobsByUserId.set(userId, jobIds);
     }
 
+    // Add to alternative data structuure
     if (this.userIdsByJobId.has(jobId)) {
       this.userIdsByJobId.set(
         jobId,
